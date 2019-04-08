@@ -8,15 +8,14 @@ public class ExpressionTree{
     }
   }
 
-  /*return the expression as a postfix notation string without parenthesis*/
-  /* The sample tree would be: "3 2 10 * +"     */
   public String toStringPostfix(){
-    /*you are to write this method*/
-    return "";
-  }
-
-  /*return the expression as a prefix notation string without parenthesis*/
-  /* The sample tree would be: "+ 3 * 2 10"     */
+    if(isValue()){
+     return ""+getValue();
+   }
+   else{
+     return getLeft().toStringPostfix()+" "+getRight().toStringPostfix()+ " "+getOp();
+   }
+ }
 
   public String toStringPrefix(){
     /*you are to write this method*/
