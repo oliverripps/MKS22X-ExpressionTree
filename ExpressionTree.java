@@ -1,7 +1,11 @@
 public class ExpressionTree{
   public String toString(){
-    /*you are to write this method*/
-    return "";
+    if(isValue()){
+      return ""+getValue();;
+    }
+    else{
+      return "("+getLeft().toString()+" "+ getOp()+" "+getRight().toString()+")";
+    }
   }
 
   /*return the expression as a postfix notation string without parenthesis*/
